@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "CompleteProcess";
+}
+
+<h1>CompleteProcess</h1>
+
+<h2>Request Id is : @TempData.Peek("RequestId")</h2>
+<h2>Processing Charge is : @TempData.Peek("Processing")</h2>
+<h2>Delivery and Packageing Charges : @TempData.Peek("PandD")</h2>
+
+<h2>Total Charges : @TempData.Peek("pay")</h2>
+
+@Html.ActionLink("Payment", "Payment", "User", new { RequestId = @TempData.Peek("RequestId") }) 
